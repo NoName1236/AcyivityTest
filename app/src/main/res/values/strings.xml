@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AcyivityTest</string>
+    <string name="label_content">这是一个标题栏</string>
+</resources>
