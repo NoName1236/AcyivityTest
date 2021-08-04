@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
     <Button
-        android:id="@+id/button_1"
+        android:id="@+id/button_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/click_me"
         android:textAllCaps="false"
-        />
+        android:text="@string/button_2"/>
 </LinearLayout>

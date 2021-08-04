@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">AcyivityTest</string>
     <string name="label_content">这是一个标题栏</string>
+    <string name="click_me">Click me!</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+    <string name="button_2">Button 2</string>
+    <string name="button_3">Button 3</string>
 </resources>
