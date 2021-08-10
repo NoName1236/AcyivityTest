@@ -1,4 +1,4 @@
-package com.hui.acyivitytest;
+package com.hui.activitytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,16 +15,19 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_layout);
         Button button=findViewById(R.id.button_2);
-        final Intent intent=getIntent();
-        final String data= intent.getStringExtra("extra_data");
+//        final Intent intent=getIntent();
+//        final String data= intent.getStringExtra("extra_data");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(SecondActivity.this,data,Toast.LENGTH_SHORT).show();
-                Intent intent1=new Intent();
-                intent1.putExtra("data_return","Hello FirstActivity!");
-                setResult(RESULT_OK,intent1);
-                finish();
+                Intent intent1 = getIntent();
+                Bundle bundle_second= intent1.getBundleExtra("data_name");
+                String str_second=bundle_second.getString("data_key");
+                Toast.makeText(SecondActivity.this,str_second,Toast.LENGTH_SHORT).show();
+//                Intent intent1=new Intent();
+//                intent1.putExtra("data_return","Hello FirstActivity!");
+//                setResult(RESULT_OK,intent1);
+//                finish();
             }
         });
     }
@@ -34,4 +37,5 @@ public class SecondActivity extends AppCompatActivity {
         Toast.makeText(SecondActivity.this,"保存成功！",Toast.LENGTH_SHORT).show();
         super.onBackPressed();
     }
+
 }
